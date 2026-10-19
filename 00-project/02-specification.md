@@ -13,7 +13,6 @@ project_outline: "[[00-project/01-project-outline]]"
 - Felhasználónak meg kell adnia a kiindulási pontját (térképen kijelöléssel vagy cím beírásával), hogy onnan induljon és oda is térjen vissza az útvonal.
 - Felhasználónak be kell állítania a kívánt távolságot, valamint a szintemelkedésre, burkolatra és tereptípusra vonatkozó preferenciáit.
 - Felhasználónak legalább két különböző út közül kell választania, melyeket a weboldalon egy térkép fog szemléltetni.
-- Felhasználónak a sportolás után látnia kell a mozgás statisztikát. Ebbe tartozik az átlagsebesség, az időtartam és ezeknek a kilométerenkénti bontása.
 - Adminnak le kell futtatnia a két különböző algoritmust ugyanazokkal a bemenetekkel, hogy össze tudja hasonlítani őket.
 
 ## 3) Funkcionális követelmények
@@ -22,7 +21,7 @@ project_outline: "[[00-project/01-project-outline]]"
 |Vizuális felület|Kezdőpont kiválasztása a térképen és a prioritások beállítása|Kötelető|
 |Zárt körútvonal generálás|A gráf-központú motor a generált útvonalat a kiindulópontra viszi vissza|Kötelező|
 |Alternatív útvonalak|A rendszernek legalább két különöző útvonal generálása a feladata|Kötelező|
-|Adatok elemzése|A felhasználónak látnia kell az edzés részleteit annak befejeztével|Kötelező|
+|Adatok elemzése|A felhasználónak látnia kell az edzés részleteit annak befejeztével|Ajánlott|
 |Élő adatok|Az időjárás, népszerűségi faktor és a biztonság figyelembe vétele|Ajánlott|
 |Saját profil|A rendszer regisztráció után elmenti a felhasználó edzésének részleteit|Ajánlott|
 
@@ -92,7 +91,7 @@ flowchart LR
 ### Megvalósíthatóság és technikai kockázatok
 |Kockázat/feltételezés|2. félévre tervezett validáció|Tartalék megközelítése|
 |---|---|---|
-|A letöltött térképen túl sok útnál hiányozhat a burkolat vagy a meredekség|Ellenőrizzük a hiányzó adatokat, megnézzük ez mennyire rondít bele az útvonalgenerálásba|Logikus alapértelmezett értékeket rendelünk a hiányzó szakaszokhoz|
+|A letöltött térképen túl sok útnál hiányozhat a burkolat vagy a meredekség|Ellenőrizzük a hiányzó adatokat, megnézzük ez mennyire nehezíti ez az útvonalgenerálást|Logikus alapértelmezett értékeket rendelünk a hiányzó szakaszokhoz|
 |Ritkább úthálózaton nehezebb kihozni a körutat a hangyakolónia algoritmussal|Véletlenszerű tesztek futtatása, átlagos hibaarány dokumentációja|Hibahatár emelése, algoritmus megváltozatása|
 |A gráfmotor számítási ideje és memóriaigénye túl magas lehet a webes válaszidőhöz|Térkép fokozatos növelésével megtaláljuk a rendszer teljesítményének határát|Csak a kezdőpont körüli területeket vizsgáljuk, felesleges értékeket beolvasáskor elvetjük|
 |Az offline Geofabrik .pbf fileból a gráf felépítése indulások túl sok ideig tarthat|Rendszer indítási idejét megmérjük a végleges tesztterületen|Python gráfot lementjük egy helyi fileba, és később csak ezt töltjük vissza a memóriába|
