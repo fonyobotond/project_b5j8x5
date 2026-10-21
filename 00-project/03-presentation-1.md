@@ -20,7 +20,7 @@ A jelenlegi útvonaltervezők többnyire A pontból B pontba érkező utakat gen
 <!--@slide Célfelhasználók-->
 
 ## Célfelhasználók
-A webalkalmazás célközönségét elsősorban olyan amatőr sportolók alkotják akik:
+A webalkalmazás célközönségét elsősorban olyan sportolók alkotják akik:
 - Ismeretlen környéken szeretnének edzeni  (nyaralás, utazás)
 - A megszokott útvonalaik helyett új kihívásokat keresnek
 - Specifikus edzésterv alapján dolgoznak (adott szintemelkedés/távolság)
@@ -33,7 +33,7 @@ A webalkalmazás célközönségét elsősorban olyan amatőr sportolók alkotj�
 ## Tervezett hatókör
 | Kategória         | Funkció és leírás                                                                 |
 | ----------------- | --------------------------------------------------------------------------------- |
-| Paraméterezés     | Kezdőpont, távolság, útminőség, szintemelkedés és ezek súlyozásának megvadása     |
+| Paraméterezés     | Kezdőpont, távolság, útminőség, szintemelkedés és ezek súlyozásának megadása      |
 | Adatmodell        | OSM-alapú úthálózat feldolgozása, élek súlyozása, gráf alapú implementálás        |
 | Útvonal generálás | Zárt körök tervezése két különböző algoritmussal, két különöző kimenttel          |
 | Megjelenítés      | Térképes megjelenítés, és alapvető statisztikák biztosítása az alkalmazáson belül |
@@ -56,7 +56,7 @@ A webalkalmazás célközönségét elsősorban olyan amatőr sportolók alkotj�
 1) A felhasználó megadja a kiindulási pontot és beállítja a preferenciáit (távolság, tereptípus, max. meredekség)
 2) A rendszer a háttérben az OSM adatokból felépített gráf alapján optimalizált, zárt útvonalakat számol
 3) A sportoló megtekinti a térképen megjelenített legalább két útvonalat, és össszehasoníltja őket
-4) Kiválasztja a számára tökéletes utat
+4) Kiválasztja a számára kedvező utat
 
 ---
 <!--@slide Következő lépések-->
